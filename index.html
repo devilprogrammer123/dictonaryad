@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: url(assets/asset\ 7.jpeg) no-repeat ;
+        background-size: 100%;
+        font-family: "Nanum Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+
+    .container {
+        max-width: 1280px;
+        width: 100%;
+        /* border: 2px solid black; */
+        height: 100%;
+        /* position: absolute; */
+        /* left: 50%; */
+        /* right: 50%; */
+
+
+    }
+    header{
+        background-color: black ;
+        opacity: .5;
+    }
+
+    header,
+    .section1,
+    .ad1,
+    .section2 {
+        width: 100%;
+        display: flex;
+        /* flex-direction: row; */
+        justify-content: center;
+        /* border: 2px solid black; */
+    }
+
+    h1 {
+        height: 100%;
+        color: white;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-weight: 700;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 10px;
+        align-items: center;
+        position: sticky;
+
+        
+
+
+    }
+
+    .navul {
+        display: flex;
+        width: 40%;
+        list-style: none;
+        justify-content: space-evenly;
+        height: 100%;
+        margin-left: 200px;
+    }
+
+    .login {
+        margin: 0px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 15%;
+
+    }
+
+    .about li {
+        display: none;
+    }
+
+    #Register {
+        background-color: #2E89FC;
+        color: white;
+        height: 40px;
+        border: none;
+        width: 80px;
+        border-radius: 4px;
+    }
+
+
+    .section1 {
+        /* border: 2px solid black; */
+        height: 400px;
+        display: flex;
+        background-color: black ;
+        opacity: .5;
+
+    }
+
+    .coverpage {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .aboutheading {
+        height: 30px;
+    }
+
+    .coverpage p {
+        color: white;
+        font-weight: 500;
+        font-size: larger;
+        max-width: 50%;
+        /* height: 20%;
+        display: flex;
+        justify-content: space-between; */
+    }
+
+    .coverpage h1 {
+        font-size: 50px;
+        font-weight: 50;
+        margin-bottom: 30px;
+    }
+
+    .ad1 {
+        height: 500px;
+        background: white;
+    }
+
+    .ad1content {
+        display: flex;
+
+    }
+
+    .con1,
+    .con2 {
+        /* border: 2px solid black; */
+        width: 50%;
+        margin: 10px;
+    }
+
+    .con1 img {
+        width: 90%;
+        border-radius: 4px;
+
+    }
+
+    .imgad1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .con2 h1 {
+        height: auto;
+        color: #2E89FC;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .con2,
+    .con2 ul {
+        padding: 30px;
+        display: flex;
+        /* justify-content: center; */
+        flex-direction: column;
+        padding: 20px 50px;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #676767;
+
+    }
+
+    .con2 .p1,
+    .p2 {
+        margin-top: 20px;
+
+
+        padding: 0px 0px 20px;
+
+    }
+
+    .con2 ul {
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 50px;
+    }
+
+    .section2 {
+        height: 1490px;
+        background-color: white;
+
+    }
+
+    .imgsec1 {
+        padding: 40px;
+    }
+
+    .readmore {
+        display: flex;
+        /* justify-content: center; */
+        align-items: end;
+        padding-left: 30%;
+        margin: 40px;
+
+    }
+
+    .rd1 {
+        margin-right: 10px;
+    }
+
+    .rd1 a,
+    .rd2 a {
+        color: #2E89FC;
+    }
+
+    .rd2 {
+        /* margin-top: 20px; */
+    }
+
+    .rd1 p,
+    .rd2 p {
+        margin-bottom: 20px;
+    }
+
+    .team h1 {
+        color: #2E89FC;
+    }
+
+    .teamheading {
+        margin-left: 50px;
+        font-size: 20px;
+
+    }
+
+    hr {
+        width: 70px;
+        height: 3px;
+        background-color: #2E89FC;
+        border: none;
+        margin: 10px;
+    }
+
+    .persons {
+        width: 100%;
+        /* border: 2px solid blue; */
+        display: flex;
+
+    }
+
+    .persons a {
+        color: #2E89FC;
+    }
+
+    .prs {
+        width: 25%;
+        padding: 20px;
+    }
+
+    .prs img {
+        width: 100%;
+        margin-bottom: 20px;
+
+    }
+
+    .prs h3 {
+        margin-bottom: 10px;
+        font-size: 25px;
+        font-weight: 100;
+    }
+
+    .prs p {
+        margin-top: 20px;
+        line-height: 30px;
+        font-size: 18px;
+        font-weight: 100;
+        width: 80%;
+    }
+
+    .section3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .teamslide {
+        /* border: 2px solid red; */
+        height: 525px;
+        background-color: #dad6d6;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    footer {
+        /* border: 2px solid rgb(47, 205, 26); */
+        height: 700px;
+        background-color: #333333;
+        width: 100;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footmaincon {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px;
+        padding-top: 100px;
+    }
+
+    .footcons {
+        width: 25%;
+        margin: 20px;
+        color: #7a7878;
+        line-height: 30px;
+    }
+
+    .footcons ul {
+        list-style: none;
+        color: #b5b3b3;
+        line-height: 50px;
+        font-size: large;
+    }
+
+    .footcons h2 {
+        color: white;
+        font-weight: 100;
+        margin-bottom: 20px;
+        font-size: large;
+    }
+
+    .footcons p {
+        font-size: large;
+        font-weight: 100;
+
+    }
+
+    .footcon1 {
+        width: 50%;
+    }
+
+    .footcon4 .search {
+        height: 8%;
+        width: 200px;
+        background-color: #2e8bfc00;
+        border: 2px solid gray;
+        margin-left: -50px;
+        font-size: larger;
+        padding: 8px;
+        font-weight: 100;
+
+    }
+
+    .footcon4 {
+        display: flex;
+    }
+
+    .footcon4 .searchbtn {
+        width: 40%;
+        height: 8%;
+        border: none;
+        background-color: #2E89FC;
+        color: white;
+        font-size: larger;
+        padding: 10px;
+        font-weight: 100;
+
+
+    }
+</style>
+
+<body>
+    <header>
+
+        <div class="container">
+            <nav>
+                <h1><a href="#">DIRECTORYADS</a></h1>
+
+                <ul class="navul">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Ads</a></li>
+                    <li><a href="#">
+                            <ul class="about">
+                                <a href="#">About</a>
+                                <li><a href="#">The Company</a></li>
+                                <li><a href="#"> The Leadership</a></li>
+                                <li><a href="#"></a>Philosopy</li>
+                                <li><a href="#"></a>Careers</li>
+                            </ul>
+                        </a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <div class="login">
+                    <a href="#">| Log in</a>
+                    <input type="button" id="Register" value="Register">
+                </div>
+
+        </div>
+        </nav>
+        </div>
+
+    </header>
+    <section class="section1">
+        <div class="container coverpage">
+            <h1 class="aboutheading">About Us</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </section>
+
+    <section class="ad1">
+        <div class="container ad1content">
+            <div class="imgad1 con1 ">
+                <img src="assets/asset 7.jpeg" alt="">
+            </div>
+            <div class="contentad con2">
+                <h1>Why DirectoryAds</h1>
+                <p class="p1">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam voluptates a explicabo delectus
+                    sed labore dolor enim optio odio at!
+
+
+                </p>
+                <p class="p2">
+                    Adipisci dolore reprehenderit est et assumenda veritatis, ex voluptate odio consequuntur quo ipsa
+                    accusamus dicta laborum exercitationem aspernatur reiciendis perspiciatis!
+
+                </p>
+                <ul>
+                    <li>Adipisci dolore reprehenderit</li>
+                    <li>Accusamus dicta laborum</li>
+                    <li>Delectus sed labore</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="section2">
+        <div class="container">
+
+            <div class="imgsec1">
+                <img src="assets/asset 5.jpeg" alt="">
+            </div>
+
+            <div class="readmore">
+
+                <div class="rd1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem optio harum consectetur sapiente.
+                        Fuga provident alias quisquam vitae distinctio repellat saepe, accusamus maxime voluptate omnis
+                        nemo, facilis eveniet aliquid! Rem porro aspernatur blanditiis quidem?</p>
+
+                    <a href="#">Read More</a>
+
+                </div>
+                <div class="rd2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem optio harum consectetur sapiente.
+                        Fuga provident alias quisquam vitae distinctio repellat saepe, accusamus maxime voluptate omnis
+                        nemo, facilis eveniet aliquid! Rem porro aspernatur blanditiis quidem?</p>
+                    <a href="#">Read More</a>
+                </div>
+
+            </div>
+
+            <div class="team">
+                <div class="teamheading">
+                    <h1>Our Team</h1>
+                    <hr>
+                </div>
+
+                <div class="persons">
+                    <div class="prs1 prs">
+                        <img src="assets/person_1.jpg" alt="">
+                        <h3>Susan Horton</h3>
+                        <a href="#">FOUNDER</a>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum facilis, sint libero
+                            commodi tenetur ducimus accusantium inventore.
+                        </p>
+
+
+                    </div>
+                    <div class="prs2 prs">
+                        <img src="assets/asset 3.jpeg" alt="">
+                        <h3>Susan Horton</h3>
+                        <a href="#">FOUNDER</a>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam voluptas autem qui
+                            alias officia eligendi, nam in.
+                        </p>
+                    </div>
+                    <div class="prs3 prs">
+                        <img src="assets/asset 2.jpeg" alt="">
+                        <h3>Gordon Meyer</h3>
+                        <a href="#">LEAD DEVELOPER</a>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore animi quam, est vero.
+                            Omnis sunt, totam qui!
+                        </p>
+                    </div>
+                    <div class="prs4 prs">
+                        <img src="assets/asset 0.jpeg" alt="">
+                        <h3>Doug Hale Kennedy</h3>
+                        <a href="#">PROJECTMANAGER</a>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae exercitationem voluptatum,
+                            laboriosam unde ipsam modi iusto, numquam?
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <section class="section3">
+        <div class="teamslide">
+            <div class="container">
+
+            </div>
+
+        </div>
+        <footer>
+            <div class="container footmaincon">
+                <div class="footcon1 footcons">
+                    <h2>About</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A praesentium libero ea illo corporis
+                        debitis nisi quod veritatis consequuntur natus.</p>
+                </div>
+                <div class="footcon2 footcons">
+                    <h2>Navigations</h2>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Services</li>
+                        <li>Testimanials</li>
+                        <li>Contact Us</li>
+
+                    </ul>
+                </div>
+                <div class="footcon3 footcons">
+                    <h2>Follow Us</h2>
+
+                </div>
+                <div class="footcon4 footcons">
+                    <input class="search" type="search" placeholder="Search products...">
+                    <input class="searchbtn" type="button" value="Search">
+                </div>
+
+            </div>
+
+
+        </footer>
+        
+    </section>
+
+
+</body>
+
+</html>
